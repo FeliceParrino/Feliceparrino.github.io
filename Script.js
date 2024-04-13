@@ -1,6 +1,7 @@
 // Funzione per gestire lo scorrimento fluido quando si fa clic sui link della navigazione
-function smoothScroll(target, duration) {
+/*function smoothScroll(target, duration) {
     var target = document.querySelector(target);
+    console.log(target);
     var targetPosition = target.getBoundingClientRect().top;
     var startPosition = window.pageYOffset;
     var distance = targetPosition - startPosition;
@@ -22,7 +23,9 @@ function smoothScroll(target, duration) {
     }
 
     requestAnimationFrame(animation);
-}
+
+    
+};
 
 // Gestisce lo scorrimento fluido quando si fa clic sui link della navigazione
 var navLinks = document.querySelectorAll('nav ul li a');
@@ -33,6 +36,22 @@ navLinks.forEach(function(link) {
         var target = this.getAttribute('href');
         smoothScroll(target, 1000);
     });
+});*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('nav ul li a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var targetId = this.getAttribute('href').substring(1); // Rimuove il carattere '#'
+            var targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
 });
+
 
 

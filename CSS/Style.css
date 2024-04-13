@@ -69,12 +69,159 @@ section p {
 }
 
 /* Stili CSS per il footer */
-.footer {
-    background-color: #333;
-    color: #fff;
+footer {
+    padding: 0px;
+    margin: 0;
+    background-color: #fff;
+    color: #2c3e50;
     padding: 60px opx;
     font-size: 14px;
 }
+
+.welcome-text {
+    animation: fade-in 2s ease-out;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+#home {
+    text-align: center; /* Centra il testo all'interno della sezione Home */
+}
+
+
+#home img {
+    width: 25%; /* Imposta la larghezza dell'immagine al 50% della larghezza della sezione Home */
+    margin: 0 auto; /* Imposta il margine laterale automatico per centrare l'immagine */
+}
+
+#home p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-button{
+    
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.about-content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 25%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills h3 {
+    font-size: 1.5rem;
+    color: #333; /* Colore del testo */
+    margin-bottom: 10px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #555; /* Colore del testo */
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills li::before {
+    content: '\2022'; /* Codice Unicode per un bullet point */
+    color: #e74c3c; /* Colore dell'icona */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Animazione al passaggio del mouse sulle competenze */
+.skills li:hover {
+    color: #e74c3c; /* Cambia il colore del testo al passaggio del mouse */
+    cursor: pointer;
+}
+
+/* Stile per l'animazione al passaggio del mouse sulle competenze */
+.skills li:hover::before {
+    transform: translateY(-50%) scale(1.2); /* Effetto di ingrandimento dell'icona al passaggio del mouse */
+    transition: transform 0.3s ease; /* Animazione fluida */
+}
+
+
+
+.project-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-images img {
+    width: calc(33.33% - 10px); /* Calcola la larghezza in base alla dimensione della finestra del browser */
+}
+
 
 .footer-content {
     display: flex;
@@ -92,11 +239,19 @@ section p {
 }
 
 .footer-section.about {
+    max-width: fit-content;
+    padding-top: 20px;
+    padding-left: 20px;
     flex-basis: 300px;
 }
 
 .footer-section.about p {
     margin-bottom: 20px;
+}
+.footer-section.contact-form{
+    padding-top: 20px;
+    width: 200px;
+    max-width: fit-content;
 }
 
 .contact-form input,
@@ -123,12 +278,12 @@ section p {
 }
 
 /* Stili CSS per il footer */
-.footer {
+/*.footer {
     background-color: #2c3e50;
     color: #fff;
     padding: 50px 0;
     text-align: center;
-}
+}*/
 
 .footer-bottom {
     display: flex; 
@@ -146,7 +301,8 @@ section p {
 
 /* Stili CSS per la sezione dei link nel footer */
 .footer-section.links {
-    flex-basis: 300px; /* Larghezza della sezione dei link */
+    padding: 20px;
+    flex-basis: 100px; /* Larghezza della sezione dei link */
 }
 
 .footer-section.links h2 {
