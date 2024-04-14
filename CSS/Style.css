@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* Font personalizzato per il corpo del testo */
 body {
     font-family: Arial, sans-serif;
@@ -69,9 +73,12 @@ section p {
 }
 
 /* Stili CSS per il footer */
+
 footer {
     padding: 0px;
-    margin: 0;
+    margin-top: auto;
+    padding: var(--spacing-2) 0;
+    text-align: center;
     background-color: #fff;
     color: #2c3e50;
     padding: 60px opx;
@@ -117,10 +124,7 @@ footer {
 }
 
 #about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
+   text-align: center;
 }
 
 .about-content {
@@ -157,53 +161,22 @@ footer {
 .about-image img:hover {
     transform: scale(1.1);
 }
-
-
-
-
-.skills {
-    margin-top: 20px;
+.skills-title{
+    text-align: center;
 }
 
-.skills h3 {
-    font-size: 1.5rem;
-    color: #333; /* Colore del testo */
-    margin-bottom: 10px;
-}
-
-.skills ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skills li {
-    margin-bottom: 8px;
-    font-size: 1.2rem;
-    color: #555; /* Colore del testo */
-    position: relative;
-    padding-left: 20px;
-}
-
-.skills li::before {
-    content: '\2022'; /* Codice Unicode per un bullet point */
-    color: #e74c3c; /* Colore dell'icona */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Animazione al passaggio del mouse sulle competenze */
-.skills li:hover {
-    color: #e74c3c; /* Cambia il colore del testo al passaggio del mouse */
-    cursor: pointer;
-}
-
-/* Stile per l'animazione al passaggio del mouse sulle competenze */
-.skills li:hover::before {
-    transform: translateY(-50%) scale(1.2); /* Effetto di ingrandimento dell'icona al passaggio del mouse */
-    transition: transform 0.3s ease; /* Animazione fluida */
-}
+#skills-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  #skills-container > * {
+    font-size: 2em;
+    width: 2em;
+    margin-top: var(--spacing-1);
+  }
 
 
 
@@ -328,3 +301,14 @@ footer {
 .footer-section.links a:hover {
     color: #e74c3c; /* Cambia il colore del testo dei link al passaggio del mouse */
 }
+
+.heart {
+    color: red;
+  }
+
+@media only screen and (max-width: 600px) {
+    .about-me-container {
+      flex-direction: column;
+    }
+  }
+  
