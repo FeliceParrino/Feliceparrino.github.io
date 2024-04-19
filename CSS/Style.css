@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
 
 html {
@@ -14,16 +14,49 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
     background-color: #f0f0f0;
-    color: #333;
+    color: black;
 }
 
 /* Stile dell'intestazione */
 header {
     background-color: #2c3e50;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
+    margin-bottom: 20px;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+h1 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 24px
+}
+
+ ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
 }
 
 /* Stile del titolo dell'intestazione */
@@ -50,7 +83,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+
     color: #e74c3c;
+    text-decoration: none;
 }
 
 /* Stile delle sezioni */
@@ -75,31 +110,38 @@ section p {
 /* Stili CSS per il footer */
 
 footer {
-    padding: 0px;
-    margin-top: auto;
-    padding: var(--spacing-2) 0;
+    padding: 20px;
     text-align: center;
     background-color: #fff;
-    color: #2c3e50;
-    padding: 60px opx;
+    color: black;
     font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
 }
 
-.welcome-text {
-    animation: fade-in 2s ease-out;
+.welcome-video {
+    position: relative; /* Permette posizionamento assoluto del contenuto */
+    height: 50vh; /* Altezza dell'intera visuale */
+    overflow: hidden; /* Nasconde gli elementi fuori dalla sezione */
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
 }
 
-@keyframes fade-in {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
+.background-video {
+    position: absolute; /* Permette di riempire tutta la sezione */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta il video all'intera sezione */
+    z-index: -1; /* Mantiene il video sotto il contenuto */
 }
-
-
-
-
 
 #home {
     text-align: center; /* Centra il testo all'interno della sezione Home */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
 }
 
 
@@ -119,22 +161,21 @@ footer {
     align-items: center;
     justify-content: center;
 }
-.home-button{
-    
-}
 
 #about {
    text-align: center;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
 }
 
 .about-content {
     flex: 1;
     padding: 0 20px;
+    
 }
 
 .about-title {
     font-size: 2rem;
-    color: #333;
+    color: black;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -142,7 +183,7 @@ footer {
 .about-content p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #666;
+    color: black;
     text-align: justify;
 }
 
@@ -161,6 +202,11 @@ footer {
 .about-image img:hover {
     transform: scale(1.1);
 }
+
+#skills{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
+}
+
 .skills-title{
     text-align: center;
 }
@@ -178,7 +224,10 @@ footer {
     margin-top: var(--spacing-1);
   }
 
-
+#projects{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
 
 .project-title{
     display: flex;
@@ -193,8 +242,17 @@ footer {
 
 .project-images img {
     width: calc(33.33% - 10px); /* Calcola la larghezza in base alla dimensione della finestra del browser */
+    border-radius: 8px;
 }
 
+#info-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
+}
 
 .footer-content {
     display: flex;
@@ -221,42 +279,6 @@ footer {
 .footer-section.about p {
     margin-bottom: 20px;
 }
-.footer-section.contact-form{
-    padding-top: 20px;
-    width: 200px;
-    max-width: fit-content;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #2c3e50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #34495e;
-}
-
-/* Stili CSS per il footer */
-/*.footer {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-}*/
 
 .footer-bottom {
     display: flex; 
@@ -265,6 +287,7 @@ footer {
     color: #fff;
     background-color: #1a252f;
     padding: 10px 0;
+    border-radius: 10px;
 }
 
 .footer-bottom p {
@@ -274,6 +297,7 @@ footer {
 
 /* Stili CSS per la sezione dei link nel footer */
 .footer-section.links {
+    text-align: center;
     padding: 20px;
     flex-basis: 100px; /* Larghezza della sezione dei link */
 }

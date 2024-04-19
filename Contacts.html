@@ -3,85 +3,81 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts - Felice Parrino</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="CSS/Style.css">
     <link rel="stylesheet" href="CSS/Contacts.css">
     
 </head>
 
+<header>
+    <nav>
+      <h2 id="logo">Felice Parrino</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="index.html">Home</a></li>
+        <li class="navigation-item"><a href="index.html#skills">Skills</a></li>
+        <li class="navigation-item"><a href="index.html#projects">Projects</a></li>
+        <li class="navigation-item"><a href="Contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+</header>
+
 <body>
-    <header>
-        <h1>Contacts</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <!-- Aggiungi altri link alla navigazione se necessario -->
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h2>Informazioni di Contatto</h2>
-            <p>Inserisci qui le tue informazioni di contatto, come l'indirizzo email e il numero di telefono.</p>
-        </section>
 
-        <section>
-            <h2>Modulo di Contatto</h2>
-            <form id="contactForm">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required><br><br>
+    <div class="image-card" style="background-image: url('images/contacts-img2.jpg');">
+      <div class="content-img">
+        <h1></h1>
+      </div>
+    </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+    <div class="contact-card">
+        <h1>Contact Me</h1>
+        <p>Thank you for visiting my portfolio! If you have any questions or would like to collaborate on a project, please contact me with the following information:</p>
 
-                <label for="message">Messaggio:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <ul>
+            <li><strong><i class="fas fa-envelope"></i></strong> <a href="mailto:feliceparrino@gmail.com">Feliceparrino@gmail.com</a></li>
+            <li><strong><i class="fas fa-phone"></i></strong> <a href="tel:=+447888429741">+44 (0)7888 429741</a></li>
 
-                <input type="submit" value="Invia">
-            </form>
-        </section>
-    </main>
-
+            <li><strong>Follow Me and My Projects:</strong>
+                    <br>
+                    <br>
+                    <a href="https://www.linkedin.com/in/tuo-profilo/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/tuo-profilo" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </li>
+        </ul>
+    </div>
+</body>
+    
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <h1 class="logo-text">Felice Parrino</h1>
                 <p>
-                    I'm a passionate front-end developer dedicated to crafting engaging and innovative digital experiences. With expertise in web development, I strive to deliver creative and high-performing solutions for clients. From design to deployment, I work diligently to bring ideas to digital reality.
+                    I'm a passionate Front-end developer dedicated to crafting engaging and innovative digital experiences. With expertise in web development, I strive to deliver creative and high-performing solutions for clients. From design to deployment, I work diligently to bring ideas to digital reality.
                 </p>
                 <div class="contact">
-                    <span><i class="fas fa-phone"></i></span>
-                    <span><i class="fas fa-envelope"></i> Feliceparrino@gmail.com</span>
+                    <span><a href="tel:+447888429741"><i class="fas fa-phone"></i> +44 (0)7888 429741</a></span>
+                    <span><a href="mailto:feliceparrino@gmail.com"><i class="fas fa-envelope"></i> Feliceparrino@gmail.com</a></span>
                 </div>
                 <div class="socials">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/FeliceParrino"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/felice-parrino-b43940259/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    
                 </div>
             </div>
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html/">About</a></li>
-                    <li><a href="index.html/">Projects</a></li>
-                    <li><a href="Contact.html">Contacts</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="Contacts.html">Contacts</a></li>
                 </ul>
             </div>
-            <div class="footer-section contact-form">
-                <h2>Contact Me</h2>
-                <form action="#" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Il tuo indirizzo email...">
-                    <textarea name="message" class="text-input contact-input" placeholder="Il tuo messaggio..."></textarea>
-                    <button type="submit" class="btn btn-big contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Send
-                    </button>
-                </form>
-            </div>
+            
         </div>
         <div class="footer-bottom">
             &copy; 2024 Felice Parrino | Made with  <span class="heart"> ♥ </span>  in London 
@@ -91,6 +87,6 @@
 
     <script src="Contacts.js"></script>
 
-</body>
+
 
 </html>
